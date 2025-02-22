@@ -86,8 +86,34 @@
             color: white;
             text-decoration: none;
         }
-        .p1 {
-            font-size: 30px;
+        h2 {
+            font-size: 50px;
+            text-align: center;
+            font-weight: bold;
+            animation: glow 1.5s ease-in-out infinite, blink 3s ease-in-out infinite;
+        }
+
+        /* Glowing effect */
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+            }
+            50% {
+                text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff, 0 0 40px #ff00ff;
+            }
+            100% {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+            }
+        }
+
+        /* Blink effect */
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
         }
 
         @media (max-width: 768px) {
@@ -113,9 +139,8 @@
 <body>
 
     <div class="overlay"></div> <!-- Overlay to make the content more readable -->
-
+    <h2>srpatelco.com is now srpatelco.co.uk</h2>
     <div class="container">
-        <p1>srpatelco.com is now srpatelco.co.uk</p1>
         <h1>We Have Moved!</h1>
         <p>You are being redirected to our new website in <strong id="timer">10</strong> seconds.</p>
         <p>If you are not redirected, <a href="https://srpatelco.co.uk">click here</a>.</p>
