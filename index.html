@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirect Notice</title>
-    <meta http-equiv="refresh" content="10;url=https://srpatelco.co.uk">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,8 +28,23 @@
 <body>
     <div class="container">
         <h1>We Have Moved!</h1>
-        <p>You are being redirected to our new website in <strong>10 seconds</strong>.</p>
+        <p>You are being redirected to our new website in <strong id="timer">10</strong> seconds.</p>
         <p>If you are not redirected, <a href="https://srpatelco.co.uk">click here</a>.</p>
     </div>
+
+    <script>
+        var countdown = 10; // Set the countdown time
+        var timerElement = document.getElementById("timer");
+
+        var interval = setInterval(function() {
+            countdown--; // Decrease the countdown by 1
+            timerElement.innerText = countdown; // Update the displayed time
+
+            if (countdown <= 0) {
+                clearInterval(interval); // Stop the timer when it reaches 0
+                window.location.href = "https://srpatelco.co.uk"; // Redirect to the new website
+            }
+        }, 1000); // Update the timer every second (1000 milliseconds)
+    </script>
 </body>
 </html>
