@@ -5,27 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirect Notice</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
+        /* Reset some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
         .container {
             max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #f9f9f9;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #f1f1f1;
+        }
+
+        strong {
+            font-size: 22px;
+            color: #ffeb3b;
+        }
+
         a {
-            color: blue;
+            color: #ff4081;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #f50057;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .footer {
+                font-size: 12px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>We Have Moved!</h1>
         <p>You are being redirected to our new website in <strong id="timer">10</strong> seconds.</p>
@@ -46,6 +117,15 @@
                 window.location.href = "https://srpatelco.co.uk"; // Redirect to the new website
             }
         }, 1000); // Update the timer every second (1000 milliseconds)
+        
+        // Update the footer year dynamically
+        const currentYear = new Date().getFullYear();
+        document.getElementById('current-year').textContent = currentYear;
     </script>
+
+    <div class="footer">
+        <p>&copy; <span id="current-year"></span> S R PATEL & Co. All rights reserved. Made with ❤️ by <a href="https://chintan.co.uk" target="_blank">Chintan</a></p>
+    </div>
+
 </body>
 </html>
