@@ -87,22 +87,23 @@
             text-decoration: none;
         }
         h2 {
-            font-size: 50px;
+            font-size: 60px; /* Increased font size for readability */
             text-align: center;
             font-weight: bold;
             animation: glow 1.5s ease-in-out infinite, blink 3s ease-in-out infinite;
+            letter-spacing: 2px; /* Added spacing to make text more legible */
         }
 
-        /* Glowing effect */
+        /* Glowing effect with white glow */
         @keyframes glow {
             0% {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+                text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 25px white, 0 0 30px white, 0 0 35px white;
             }
             50% {
-                text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff, 0 0 40px #ff00ff;
+                text-shadow: 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 25px white, 0 0 30px white, 0 0 35px white, 0 0 40px white;
             }
             100% {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+                text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 25px white, 0 0 30px white, 0 0 35px white;
             }
         }
 
